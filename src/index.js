@@ -1,8 +1,37 @@
-/* FIRST APPROACH --------------------------
+import dotenv from "dotenv"
+import connectDB from "./db/index.js"
+
+dotenv.config({
+  path:'./env'
+})
+
+connectDB();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* FIRST APPROACH --------------------------NOT WORKING YET 
+import dotenv from "dotenv"
 import mongoose from "mongoose"
-import { DB_NAME } from "./constants"
+import { DB_NAME } from "./constants.js"
 
 import express from "express"
+
+dotenv.config({
+  path:'./env'
+})
 
 const app=express()
 
@@ -20,8 +49,8 @@ const app=express()
     })
 
   } catch (error) {
-    console.log("ERROR: ", error);
+    console.log("ERROR in catch : ", error);
     throw error;
   }
 })() //call immediate function
-------------------------------------------------------------------------------------- */ 
+// ------------------------------------------------------------------------------------- */ 
